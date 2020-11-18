@@ -1,28 +1,636 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-</head>
-<body>
-    <div id="tripetto"></div>
-    <script src="https://unpkg.com/tripetto-runner-foundation"></script>
-    <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
-    <script src="https://unpkg.com/tripetto-services"></script>
-    <script>
-        var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoieCt6encyUW55NmRDNm9JbU9zSXcwNXZBdDlocXFZOTRDOVR6OEFDdzZ5VT0iLCJkZWZpbml0aW9uIjoiRSs1eGJGZE9oQ25yYXVNUEJlTlFBVTdNUW5kVzRpOWR1MDdweEhqTTdzcz0iLCJ0eXBlIjoiY29sbGVjdCJ9.D3oNFRUii501ktwaNfcnwEKfpDc7Lh4Y-BH1tJipkyI" });
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>
+      Happy birthday! 
+    </title>
+  </head>
+  <body>
+    
 
-        TripettoAutoscroll.run({
-            element: document.getElementById("tripetto"),
-            definition: tripetto.definition,
-            styles: tripetto.styles,
-            l10n: tripetto.l10n,
-            locale: tripetto.locale,
-            translations: tripetto.translations,
-            attachments: tripetto.attachments,
-            onSubmit: tripetto.onSubmit
-        });
-    </script>
-</body>
+    <div class="wrapper">
+      <div class="intro-block">
+        <img class="first-img" src="./images/1.png" alt="">
+        <h1 class="intro-heading">Смеееерти страшииишься? Боиииишься кануть во мрааак?</h1>
+        <p class="intro-text">
+          Нет? А следовало бы!
+          У тебя в руках сундук с моими сокровищами, и мне это не нравится!
+          <br><br>
+          Впрочем, не важно - все равно лишь один человек на этой грешной земле может открыть его... Только одна женщина,
+          Избранная, для которой и предназначены мои сокровища, способна на это...
+          <br><br>
+          Эх, я не видел её уже... сколько же прошло лет?.. Кажется, будто бы уже целая вечность... Кажется, будто я никогда и
+          не
+          видел ее лица...
+          <br><br>
+          Она давно хранит в сердце древний код, открывающий сундук, но она никогда не знала истинного предназначения тех
+          магических цифр. Поэтому любой, кто захочет открыть сундук, должен пройти испытание, но только Избранная сможет сделать
+          это до конца - и сокровища откроются ей.
+          <br><br>
+          Думаешь, ты - та самая? Что ж, это легко проверить. Но если ты проиграааешь - хе-хе-хе.... тогда добро пожаловать на
+          борт Летучего Голландца!!!
+          НА-ВЕЧ-НО!!!
+        </p>
+
+        <button class="start-btn" onclick="start()">Пройти испытание</button>
+      
+      
+      
+    
+    
+    
+      </div>
+      
+      <div class="form-block hidden">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;">
+        </iframe>
+      
+        <form id="regForm"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf0NzkboUI4hgRMdUVynoj8_MTolmc6om2uB8AI9_rwz-6Vyw/formResponse"
+          method="post" target="hidden_iframe">
+      
+          <div class="tab">
+            <h2 class="section-heading">Начнем с чего-то попроще</h2>
+            <p class="question">
+              В каком месяце я написал тебе в ВК?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1188248079" value="Декабрь" oninput="this.className = ''">
+              Декабрь
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1188248079" value="Январь" oninput="this.className = ''">
+              Январь
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="first" name="entry.1188248079" value="Февраль" oninput="this.className = ''">
+              Февраль
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1188248079" value="Март" oninput="this.className = ''">
+              Март
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Как скоро мы посмотрели наш первый фильм?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.644760078" value="Прошло минимум пару недель" oninput="this.className = ''">
+              Прошло минимум пару недель
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.644760078" value="Спустя неделю" oninput="this.className = ''">
+              Спустя неделю
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.644760078" value="Через пару дней" oninput="this.className = ''">
+              Через пару дней
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="second" name="entry.644760078" value="В тот же вечер" oninput="this.className = ''">
+              В тот же вечер
+            <span class="checkmark"></span></label>
+      
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Какой же это был фильм?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.907146705" value='"Игра в имитацию" с Камбербетчем'
+                oninput="this.className = ''">
+              "Игра в имитацию" с Камбербетчем
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="third" name="entry.907146705" value='"Сияние" Кубрика' oninput="this.className = ''">
+              "Сияние" Кубрика
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.907146705" value='"Пробуждение" с Де Ниро' oninput="this.className = ''">
+              "Пробуждение" с Де Ниро
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.907146705" value='"Заводной апельсин" Кубрика' oninput="this.className = ''">
+              "Заводной апельсин" Кубрика
+            <span class="checkmark"></span></label>
+          </div>
+      
+      
+      
+          <div class="tab">
+      
+            <h2 class="section-heading">Теперь вопросы посложнее</h2>
+      
+            <p class="question">
+              Какой фильм мы смотрели на английском?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1420844575" value='"Зеленая миля"' oninput="this.className = ''">
+              "Зеленая миля"
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1420844575" id="four" value='"Крестный отец"' oninput="this.className = ''">
+              "Крестный отец"
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1420844575" value='"Джерри Магуаер"' oninput="this.className = ''">
+              "Джерри Магуаер"
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1420844575" value='"Терминал"' oninput="this.className = ''">
+              "Терминал"
+            <span class="checkmark"></span></label>
+          </div>
+      
+      
+          <div class="tab">
+      
+            <p class="question">
+              А какой фильм мой самый любимый?
+            </p>
+            <label class="label-text">
+              <input type="text" name="entry.1111553259" id="five" placeholder="Напиши название фильма"
+                oninput="this.className = ''">
+            </label>
+          </div>
+      
+      
+      
+          <div class="tab">
+      
+            <p class="question">
+              Какую аудиокнигу ты прослушала по моей рекомендации?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1232161264" value='"Кукловоды" Хайнлайн' oninput="this.className = ''">
+              "Кукловоды" Хайнлайн
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1232161264" id="six" value='"Трудно быть Богом" Стругацких'
+                oninput="this.className = ''">
+              "Трудно быть Богом" Стругацких
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1232161264" value='"Идиот" Достоевского' oninput="this.className = ''">
+              "Идиот" Достоевского
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1232161264" value='"Пикник у обочины" Стругацких' oninput="this.className = ''">
+              "Пикник у обочины" Стругацких
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Какая у нас есть традиция?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.400153242" value="Каждый год, 31 декабря мы с друзьями идем в баню.."
+                oninput="this.className = ''">
+              Каждый год, 31 декабря мы с друзьями идем в баню..
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="seven" name="entry.400153242" value="Мы встречаем вместе новый сезон в году"
+                oninput="this.className = ''">
+              Мы встречаем вместе новый сезон в году
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.400153242" value="Мы смотрим фильмы каждый вечер" oninput="this.className = ''">
+              Мы смотрим фильмы каждый вечер
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.400153242" value="Мы читаем пару раз в неделю " oninput="this.className = ''">
+              Мы читаем пару раз в неделю
+            <span class="checkmark"></span></label>
+          </div>
+      
+      
+          <div class="tab">
+            <p class="question">
+              Как тебя однажды назвал мой друг?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.719005642" value="Машина для убийств" oninput="this.className = ''">
+              Машина для убийств
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.719005642" value="Русский мясник" oninput="this.className = ''">
+              Русский мясник
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.719005642" value="Авпшный маньяк" oninput="this.className = ''">
+              Авпшный маньяк
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.719005642" id="eight" value="Машина смерти" oninput="this.className = ''">
+              Машина смерти
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              А как тебя НЕ называл я?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1297490310" value="моя маленькая императрица" oninput="this.className = ''">
+              моя маленькая императрица
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1297490310" value="мой маленький философ" oninput="this.className = ''">
+              мой маленький философ
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1297490310" value="мой маленький коллекционер" oninput="this.className = ''">
+              мой маленький коллекционер
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1297490310" value="моя маленькая королевна" oninput="this.className = ''">
+              моя маленькая королевна
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1297490310" value="мой маленький маньячек" oninput="this.className = ''">
+              мой маленький маньячек
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1297490310" id="nine" value="все из этого было" oninput="this.className = ''">
+              все из этого было
+            <span class="checkmark"></span></label>
+          </div>
+      
+      
+      
+          <div class="tab">
+            <h2 class="section-heading">Добавим еще немного сложности...</h2>
+      
+            <p class="question">
+              В какой город мы спланировали путешествие, когда тебе было грустно?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.111187522" value="Вена" oninput="this.className = ''">
+              Вена
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.111187522" id="ten" value="Прага" oninput="this.className = ''">
+              Прага
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.111187522" value="Варшава" oninput="this.className = ''">
+              Варшава
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.111187522" value="Милан" oninput="this.className = ''">
+              Милан
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Кличка моей кошки?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.228650310" value="Лола" oninput="this.className = ''">
+              Лола
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.228650310" value="Лиля" oninput="this.className = ''">
+              Лиля
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="eleven" name="entry.228650310" value="Лилу" oninput="this.className = ''">
+              Лилу
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.228650310" value="Эпонина" oninput="this.className = ''">
+              Эпонина
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+      
+            <p class="question">
+              Первое слово из нашего выдуманного словаря. Ты изобрела его случайно перед Хэллоуином, в разговоре с Юлей
+            </p>
+            <label class="label-text">
+              <input type="text" id="ga" name="entry.124201558" placeholder="Г..." oninput="this.className = ''">
+            </label>
+          </div>
+      
+          <div class="tab">
+            <h2 class="section-heading">Максимальный уровень сложности - тут без шансов!</h2>
+      
+            <p class="question">
+              По чему у меня бывает ломка?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.375540810" value="По шоколаду" oninput="this.className = ''">
+              По шоколаду
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="twelve" name="entry.375540810" value="По своей зайчихе" oninput="this.className = ''">
+              По своей зайчихе
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.375540810" value="По алкоголю" oninput="this.className = ''">
+              По алкоголю
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.375540810" value="По наркотикам" oninput="this.className = ''">
+              По наркотикам
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Какие звуки для меня самые приятные в мире?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1236896313" value="Звук попадания пули в голову противника в КС"
+                oninput="this.className = ''">
+              Звук попадания пули в голову противника в КС
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1236896313" value="Крики чаек на берегу океана" oninput="this.className = ''">
+              Крики чаек на берегу океана
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1236896313" value="СМС о зачислении зарплаты" oninput="this.className = ''">
+              СМС о зачислении зарплаты
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="thirteen" name="entry.1236896313" value="Как зевает моя зайчиха"
+                oninput="this.className = ''">
+              Как зевает моя зайчиха
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              На что я могу смотреть вечно?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1917528516" value="Как горит вода" oninput="this.className = ''">
+              Как горит вода
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1917528516" value="Как течет огонь" oninput="this.className = ''">
+              Как течет огонь
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1917528516" value="Как кто-то работает" oninput="this.className = ''">
+              Как кто-то работает
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="fourteen" name="entry.1917528516"
+                value="Как кошечка облизывается, сидя в обьятиях моей зайчихи" oninput="this.className = ''">
+              Как кошечка облизывается, сидя в обьятиях моей зайчихи
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Что нравится мне в тебе больше всего?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Прекрасная улыбка" oninput="this.className = ''">
+              Прекрасная улыбка
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Чудесный милый голос" oninput="this.className = ''">
+              Чудесный милый голос
+              <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Красивые глаза" oninput="this.className = ''">
+              Красивые глаза
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Забавная мимика" oninput="this.className = ''">
+              Забавная мимика
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Естественная красота без кучи макияжа"
+                oninput="this.className = ''">
+              Естественная красота без кучи макияжа
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Отличная фигура" oninput="this.className = ''">
+              Отличная фигура
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Большие и красивые сисяо" oninput="this.className = ''">
+              Большие и красивые сисяо
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Чувство юмора" oninput="this.className = ''">
+              Чувство юмора
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value='Эти твои "хочу"' oninput="this.className = ''">
+              Эти твои "хочу"
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Доброе и нежное сердце" oninput="this.className = ''">
+              Доброе и нежное сердце
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Твои пошленькие шуточки" oninput="this.className = ''">
+              Твои пошленькие шуточки
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Твои милые списочки покупок" oninput="this.className = ''">
+              Твои милые списочки покупок
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Книги, которые ты выбираешь" oninput="this.className = ''">
+              Книги, которые ты выбираешь
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Твой милый заразительный смех" oninput="this.className = ''">
+              Твой милый заразительный смех
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.15072439" value="Твоя любовь к животным, путешествиям и еде"
+                oninput="this.className = ''">
+              Твоя любовь к животным, путешествиям и еде
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="fifteen" name="entry.15072439" value="Все из перечисленного вместе 😊"
+                oninput="this.className = ''">
+              Все из перечисленного вместе 😊
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div class="tab">
+            <p class="question">
+              Чего из этого мы НЕ делали?
+            </p>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047"
+                value="Смотрели фильмы, слушали музыку и разговаривали до самого утра" oninput="this.className = ''">
+              Смотрели фильмы, слушали музыку и разговаривали до самого утра
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Придумывали друг другу классные сны"
+                oninput="this.className = ''">
+              Придумывали друг другу классные сны
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Читали вслух книги" oninput="this.className = ''">
+              Читали вслух книги
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Показывали друг другу любимые фильмы"
+                oninput="this.className = ''">
+              Показывали друг другу любимые фильмы
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Болтали по 5 часов подряд" oninput="this.className = ''">
+              Болтали по 5 часов подряд
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Засыпали и просыпались в одно и то же время"
+                oninput="this.className = ''">
+              Засыпали и просыпались в одно и то же время
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Просто молча лежали ночью и кайфовали на расстоянии"
+                oninput="this.className = ''">
+              Просто молча лежали ночью и кайфовали на расстоянии
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Готовили вкусные вареники вместе"
+                oninput="this.className = ''">
+              Готовили вкусные вареники вместе
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Смотрели фильмы для взрослых" oninput="this.className = ''">
+              Смотрели фильмы для взрослых
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Угощали друг друга любимыми конфетами и шоколадками"
+                oninput="this.className = ''">
+              Угощали друг друга любимыми конфетами и шоколадками
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Включали друг другу любимые песни из детства"
+                oninput="this.className = ''">
+              Включали друг другу любимые песни из детства
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Заботились друг о друге и поддерживали"
+                oninput="this.className = ''">
+              Заботились друг о друге и поддерживали
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047"
+                value="Обижались друг на друга, а потом мирились, и все было даже лучше, чем раньше"
+                oninput="this.className = ''">
+              Обижались друг на друга, а потом мирились, и все было даже лучше, чем раньше
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Скучали друг за другом" oninput="this.className = ''">
+              Скучали друг за другом
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Снились друг другу" oninput="this.className = ''">
+              Снились друг другу
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" id="sixteen" name="entry.1817396047" value="Все из этого было 😌"
+                oninput="this.className = ''">
+              Все из этого было 😌
+            <span class="checkmark"></span></label>
+            <label class="label-text container">
+              <input type="radio" name="entry.1817396047" value="Ничего из перечисленного 😒" oninput="this.className = ''">
+              Ничего из перечисленного 😒
+            <span class="checkmark"></span></label>
+          </div>
+      
+          <div style="overflow:auto;">
+            <div style="float:right;">
+              
+              <button type="button" class="navBtn" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
+              <button type="button" class="navBtn" id="nextBtn" onclick="nextPrev(1)">Следующий вопрос</button>
+            </div>
+          </div>
+      
+          <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+      
+        </form>
+      
+      </div>
+     
+      <div class="bad-result-block good hidden">
+        <h1 class="intro-heading">Хе-хе-хе... Так я и думал!</h1>
+        <p class="intro-text">
+          За последние 782 года никому не удалось пройти этого испытания!
+          Хотя твои результаты были не так уж ужасны - поэтому, так и быть, я дам тебе еще одину попытку... <br>
+          Эх, постарел я, размяяяяк... Раньше сразу на Голландец отправлял, палубы драять! НА-ВЕЧ-НО!!!
+          Чтобы начать новую попытку - обнови страницу.
+        </p>
+      </div>
+      
+      <div class="good-result-block bad hidden">
+        <h1 class="intro-heading">Неужели... это и правда Ты??</h1>
+        <p class="intro-text">
+          
+          <p class="score-text"> <b class="score"></b> из <b>17</b>! Неплохо!</p><br><br>
+          Я ждал этого момента веками, и вот, наконец ты нашлась... *вытирает осминожью слезу* <br><br>
+          Ну, оставим сентименты на потом, а сейчас пришла пора открыть, наконец, сундук с сокровищами!<br>
+          Ты, верно, хочешь знать код? Понимаааю...<br><br>
+          Но если ты и правда Избранная - ты уже знаешь его...<br>
+          Прислушайся к своему сердцу - что оно тебе говорит? Какое число не давало тебе покоя всякий раз, когда ты видела
+          его, проходя мимо?<br><br>
+          Ты не могла понять смысла этих непоследовательных чисел, что это - ошибка строителя, оплошность, или это что-то
+          означает?<br>
+          Твой внутренний перфекционист страдал, не находя смысла в этих четырех цифрах - последняя там была явно не к месту,
+          но тепеееееерь....
+          теперь ты знаешь правду - это не ошибка! <br><br>Эти древние цифры - специальный знак для тебя. И они не случайно обратили
+          твое внимание на себя. Они и есть ключ к сокровищам!
+        </p>
+      
+      </div>
+      
+    </div>
+
+
+
+    
+
+    <audio autoplay="autoplay" loop="loop">
+      <source src="./muz.mp3"></audio>
+    
+    <!-- <embed src="./muz.mp3" loop="true" autoplay="autoplay" autostart="true" width="2" height="0"> -->
+    <script src="./app.js"></script>
+  </body>
 </html>

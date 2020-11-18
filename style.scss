@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$heading-font: "Poppins", sans-serif;
+$text-font: "Open Sans", sans-serif;
+$color-violet: #674baf;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url(./images/back.jpg);
+  background-size: cover;
+  background-position: 40%;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.first-img {
+  max-width: 300px;
+}
+
+.wrapper {  
+  min-height: 100vh;  
+  border: 1px solid transparent;
+  background-color: #000000b9;
+  padding: 50px 10px;
+}
+
+@media screen and (min-width: 750px) {
+  .wrapper {
+    padding: 50px 20%;
+}
+}
+
+.intro-block {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.bad-result-block,
+.good-result-block {
+  padding: 0 10px;
+  // text-align: center;
+  line-height: 22px;
+}
+
+
+.intro-heading {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 30px 0;
+}
+
+.intro-text {  
+  font-size:16px;
+  line-height: 24px;
+  margin: 30px 0;
+}
+
+.start-btn {
+  appearance: none;
+    font-size: 1em;
+    line-height: 1.5em;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+    background-color: rgba(201, 201, 201, 0.253);
+    border: 1px solid rgba(0, 0, 0, 0.467);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    border-radius: 8px;
+    padding: 0.6075em 0.75em;
+    margin: 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
+ }
+
+.hidden {
+  display: none;
+}
+
+.navBtn {
+  appearance: none;
+    font-size: 1em;
+    line-height: 1.5em;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+    background-color: rgba(201, 201, 201, 0.253);
+    border: 1px solid rgba(0, 0, 0, 0.467);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    border-radius: 8px;
+    padding: 0.6075em 0.75em;
+    margin: 0px;
+    margin-top: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+
+#regForm {
+  background-color: rgba(29, 28, 28, 0.404);
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+
+}
+
+label {
+  display: block;
+  line-height: 20px;
+}
+
+.section-heading  {
+  font-size: 24px;
+  
+}
+
+.question {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.score-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  height: auto;
+  padding-left: 35px;
+  padding-top: 3px;
+  margin-bottom: 22px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
