@@ -94,10 +94,17 @@ function calc() {
     document.querySelector(".intro-block")
 }
 
+function zero() {
+    document.querySelector(".zero-block").classList.add('hidden')
+    document.querySelector(".wrapper").classList.remove('hidden')
+}
+
 function start() {
     document.querySelector(".intro-block").classList.add('hidden')
     document.querySelector(".form-block").classList.remove('hidden')
 }
+
+
 
 function submit() {
 

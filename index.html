@@ -14,16 +14,22 @@
     <title>
       Happy birthday! 
     </title>
-    <!-- <script>
+    <script>
       window.onload = function () {
         var context = new AudioContext();
       }
-    </script> -->
+    </script>
   </head>
   <body>
-    
+    <div class="zero-block">
+      <p class="qr">
+        С QR-кодом разобралась, ну или я дал тебе ссылку) <br>  В любом случае, ты тут, и наверно ищешь код от сундука? Не так быстро, ковбой. 
+        Включи звук смартфоне на среднюю громкость, и тогда мы начнем.
+        
+      </p><button class="go" onclick="zero()">Готово, поехали!</button>
+    </div>
 
-    <div class="wrapper">
+    <div class="wrapper hidden">
       <div class="intro-block">
         <img class="first-img" src="./images/1.png" alt="">
         <h1 class="intro-heading">Смеееерти страшииишься? Боиииишься кануть во мрааак?</h1>
@@ -628,57 +634,18 @@
       
     </div>
 
-
-
-    <!-- <iframe src="./s.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-
-
-
-    <audio autoplay loop id="myAudio">
+    <audio autoplay loop id="audio">
       <source src="./muz.mp3" type="audio/mp3">
-    </audio> -->
-
-
-
-    <script>
-      // window.onload = function () {
-      //   // var context = new AudioContext();
-      //   var aud = document.getElementById("myAudio");
-      //   // aud.classList.add('hidden')
-      //   aud.play(); 
-      // }
-
-
-      // function playSound(url) {
-      //     var audio = document.createElement('embed');
-      //     audio.src = url;
-      //     audio.style = "width:0px;height:0px";
-      //     document.body.appendChild(audio);
-      //   }
-
-        // window.onload = function () {
-        //   var audio = document.createElement('embed');
-        //   audio.src = "./muz.mp3";
-        //   audio.style = "width:0px;height:0px";
-        //   document.body.appendChild(audio);
-        // }
-
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-          var button = $("#for_audio");
-          var audio = new Audio('./muz.mp3');
-          setTimeout(function () {
-            audio.play();
-          }, 1000);
-          button.click(function () {
-            audio.play();
-          });
-        });
-    </script>
+    </audio>
     
-    <!-- <embed src="./muz.mp3" loop="true" autoplay="autoplay" autostart="true" width="2" height="0"> -->
     <script src="./app.js"></script>
+
+    <script>
+      document.addEventListener('click', musicPlay);
+        function musicPlay() {
+          document.getElementById('audio').play();
+          document.removeEventListener('click', musicPlay);
+        }
+    </script>
   </body>
 </html>

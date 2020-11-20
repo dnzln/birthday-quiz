@@ -9,6 +9,47 @@ $color-violet: #674baf;
   box-sizing: border-box;
 }
 
+.zero-block {
+  background-color: #000000e7;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  min-height: 100%;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.qr {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 22px;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.go {
+  display: inline-block;
+  margin-top: 50px;
+  appearance: none;
+    font-size: 1em;
+    line-height: 1.5em;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+    background-color: rgba(201, 201, 201, 0.253);
+    border: 1px solid rgba(0, 0, 0, 0.467);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    border-radius: 8px;
+    padding: 0.6075em 0.75em;
+    margin: 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
+}
+
 body {
   color: #fff;
   min-height: 100vh;
