@@ -17,7 +17,6 @@
     <script>
       window.onload = function () {
         var context = new AudioContext();
-        document.getElementById('myAudio').play();
       }
     </script>
   </head>
@@ -633,9 +632,20 @@
 
     <iframe src="./s.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 
-    <audio autoplay loop id="myAudio">
+
+    
+    <audio autoplay loop id="myAudio" controls>
       <source src="./muz.mp3" type="audio/mp3">
     </audio>
+
+    <script>
+      window.onload = function () {
+        var context = new AudioContext();
+        var aud = document.getElementById("myAudio");
+        aud.play(); 
+      }
+
+    </script>
     
     <!-- <embed src="./muz.mp3" loop="true" autoplay="autoplay" autostart="true" width="2" height="0"> -->
     <script src="./app.js"></script>
