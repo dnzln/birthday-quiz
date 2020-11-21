@@ -142,3 +142,20 @@ function submit() {
 
     
 }
+
+function playMusic(){
+  var music = new Audio('./click.mp3');
+  music.play();
+
+}
+  let labels = document.querySelectorAll('input');
+  let btns = document.querySelectorAll('button');
+
+  for (let i = 0; i < labels.length; i++) {
+    labels[i].addEventListener('click', playMusic);
+  }
+
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', playMusic);
+  }
+
