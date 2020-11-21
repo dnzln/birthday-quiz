@@ -90,7 +90,7 @@ function addSpec() {
 }
 
 function calc() {
-    // document.querySelector(".intro-block")
+    document.querySelector(".intro-block")
 }
 
 function zero() {
@@ -117,7 +117,7 @@ function submit() {
     if (document.querySelector('#six').checked) add();
     if (document.querySelector('#seven').checked) { add(); addSpec(); }
     if (document.querySelector('#eight').checked) add(); 
-    if (document.querySelector('#nine').checked) add();
+    // if (document.querySelector('#nine').checked) add();
     if (document.querySelector('#ten').checked) add(); 
     if (document.querySelector('#eleven').checked) add(); 
     if (document.querySelector('#twelve').checked) add();
@@ -128,7 +128,6 @@ function submit() {
     if (document.querySelector('#ga').value.toLowerCase().trim() == 'гарантуґ' ||
         document.querySelector('#ga').value.toLowerCase().trim() == 'гарантуг') add();
 
-    alert('submited')
     document.querySelector(".form-block").classList.add('hidden')
     if (specScore < 2) {
         
