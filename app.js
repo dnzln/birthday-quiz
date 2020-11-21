@@ -145,6 +145,7 @@ function submit() {
 
 function playMusic(){
   var music = new Audio('./click.mp3');
+  music.volume = 0.3;
   music.play();
 
 }
