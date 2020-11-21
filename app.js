@@ -36,11 +36,10 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     //...the form gets submitted:
       
-      calc();
+    calc(); 
       
-      
-      document.getElementById("regForm").submit();
-      submit()
+    document.getElementById("regForm").submit();
+    submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -91,12 +90,12 @@ function addSpec() {
 }
 
 function calc() {
-    document.querySelector(".intro-block")
+    // document.querySelector(".intro-block")
 }
 
 function zero() {
     document.querySelector(".zero-block").classList.add('hidden')
-    document.querySelector(".wrapper").classList.remove('hidden')
+    document.querySelector(".intro-block").classList.remove('hidden')
 }
 
 function start() {
@@ -129,13 +128,12 @@ function submit() {
     if (document.querySelector('#ga').value.toLowerCase().trim() == 'гарантуґ' ||
         document.querySelector('#ga').value.toLowerCase().trim() == 'гарантуг') add();
 
-    
-    
-    if (specScore < 4) {
-        document.querySelector(".form-block").classList.add('hidden')
+    alert('submited')
+    document.querySelector(".form-block").classList.add('hidden')
+    if (specScore < 2) {
+        
         document.querySelector(".bad-result-block").classList.remove('hidden')
     } else {
-        document.querySelector(".form-block").classList.add('hidden')
         document.querySelector(".good-result-block").classList.remove('hidden')
         document.querySelector(".score").innerHTML = score;
     }
